@@ -7,7 +7,7 @@
 // - Açık sütun projeksiyonu ve sayfalı okuma (1000'erlik parçalar).
 // - Canlı kanal yalnızca abone varken açık kalır, son abone ayrılınca kapanır.
 
-import { supabase } from "@/integrations/supabase/client";
+import { supabase } from "@/lib/supabaseKendi";
 import { cacheOku, cacheYaz, CACHE } from "./yerelCache";
 import {
   GRUPLAR,
