@@ -1047,14 +1047,14 @@ function Index() {
       <div className="min-h-screen bg-background">
         <div className="mx-auto flex min-h-screen w-full max-w-none flex-col px-2 py-4 sm:px-6 sm:py-8">
           <header className="relative mb-6 flex flex-col items-center gap-3 text-center sm:mb-12 sm:gap-5">
-            <div className="absolute left-0 top-0 flex items-center gap-2">
+            <div className="flex w-full min-w-0 items-center gap-2 text-left sm:absolute sm:left-0 sm:top-0 sm:w-auto">
               <DropdownMenu open={menuAcik} onOpenChange={setMenuAcik}>
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="outline"
                     size="icon"
                     aria-label="Menü"
-                    className="h-10 w-10 rounded-full"
+                    className="h-10 w-10 shrink-0 rounded-full"
                   >
                     <Menu className="h-5 w-5" />
                   </Button>
@@ -1150,7 +1150,7 @@ function Index() {
                   )}
                 </DropdownMenuContent>
               </DropdownMenu>
-              <span className="hidden text-sm font-medium text-muted-foreground sm:inline">
+              <span className="min-w-0 truncate text-sm font-medium text-muted-foreground">
                 {aidatListeAcik
                   ? "Talebe Listesi"
                   : sekme === "aidat"
@@ -1161,11 +1161,11 @@ function Index() {
             <div className="inline-flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 text-primary sm:h-20 sm:w-20">
               <GraduationCap className="h-7 w-7 sm:h-10 sm:w-10" />
             </div>
-            <div>
-              <h1 className="text-3xl font-bold tracking-tight text-foreground sm:text-6xl">
+            <div className="w-full min-w-0">
+              <h1 className="text-2xl font-bold tracking-tight text-foreground sm:text-6xl">
                 {tr("baslik")}
               </h1>
-              <p className="mt-2 text-base text-muted-foreground sm:text-xl">
+              <p className="mt-2 text-sm text-muted-foreground sm:text-xl">
                 {aidatListeAcik
                   ? "Talebe Listesi"
                   : sekme === "aidat"
